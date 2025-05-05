@@ -21,6 +21,8 @@ public class KafkaJsonProducer {
     }
 
     public void sendMessage(User user) {
+        LOGGER.info(String.format("message sent: %s", user.toString()));
+
         //create message
         Message<User> message = MessageBuilder
                 .withPayload(user)
